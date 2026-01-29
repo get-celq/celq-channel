@@ -4,25 +4,6 @@
   #:use-module (guix build-system cargo)
   #:use-module ((guix licenses) #:prefix license:))
 
-(define-public celq
-  (package
-    (name "celq")
-    (version "0.3.1")
-    (source
-     (origin
-       (method url-fetch)
-       (uri (crate-uri "celq" version))
-       (file-name (string-append name "-" version ".tar.gz"))
-       (sha256
-        (base32 "04gb872bav1ldnrd0k65iigkd1d171z6089vm25hj12kzwj2zvgy"))))
-    (build-system cargo-build-system)
-    (inputs (cargo-inputs 'celq))
-    (home-page "https://github.com/IvanIsCoding/celq")
-    (synopsis "CEL command-line query tool for JSON data")
-    (description
-     "This package provides a CEL command-line query tool for JSON data.")
-    (license (list license:expat license:asl2.0))))
-
 (define rust-ahash-0.8.12
   (crate-source "ahash" "0.8.12"
                 "0xbsp9rlm5ki017c0w6ay8kjwinwm8knjncci95mii30rmwz25as"))
@@ -694,3 +675,22 @@
                                  rust-zerocopy-0.8.33
                                  rust-zerocopy-derive-0.8.33
                                  rust-zmij-1.0.12)))
+
+(define-public celq
+  (package
+    (name "celq")
+    (version "0.3.1")
+    (source
+     (origin
+       (method url-fetch)
+       (uri (crate-uri "celq" version))
+       (file-name (string-append name "-" version ".tar.gz"))
+       (sha256
+        (base32 "04gb872bav1ldnrd0k65iigkd1d171z6089vm25hj12kzwj2zvgy"))))
+    (build-system cargo-build-system)
+    (inputs (cargo-inputs 'celq))
+    (home-page "https://github.com/IvanIsCoding/celq")
+    (synopsis "CEL command-line query tool for JSON data")
+    (description
+     "This package provides a CEL command-line query tool for JSON data.")
+    (license (list license:expat license:asl2.0))))
