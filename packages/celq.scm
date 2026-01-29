@@ -1,3 +1,9 @@
+(define-module (packages celq)
+  #:use-module (guix packages)
+  #:use-module (guix download)
+  #:use-module (guix build-system cargo)
+  #:use-module ((guix licenses) #:prefix license:))
+
 (define-public celq
   (package
     (name "celq")
