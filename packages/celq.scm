@@ -540,142 +540,6 @@
   (crate-source "zmij" "1.0.12"
                 "1y3ryrh5rg1aqv92vndmf0680jyczni5m6fy3cjz32q741madi9g"))
 
-(define-cargo-inputs lookup-cargo-inputs
-                     (celq =>
-                           (list rust-ahash-0.8.12
-                                 rust-aho-corasick-1.1.4
-                                 rust-annotate-snippets-0.12.10
-                                 rust-anstream-0.6.21
-                                 rust-anstyle-1.0.13
-                                 rust-anstyle-parse-0.2.7
-                                 rust-anstyle-query-1.1.5
-                                 rust-anstyle-wincon-3.0.11
-                                 rust-antlr4rust-0.5.2
-                                 rust-anyhow-1.0.100
-                                 rust-arraydeque-0.5.1
-                                 rust-autocfg-1.5.0
-                                 rust-base64-0.22.1
-                                 rust-better-any-0.2.1
-                                 rust-bit-set-0.8.0
-                                 rust-bit-vec-0.8.0
-                                 rust-bitflags-2.10.0
-                                 rust-bumpalo-3.19.1
-                                 rust-byteorder-1.5.0
-                                 rust-bytes-1.11.0
-                                 rust-cc-1.2.51
-                                 rust-cel-0.12.0
-                                 rust-cfg-if-1.0.4
-                                 rust-chrono-0.4.42
-                                 rust-clap-4.5.54
-                                 rust-clap-builder-4.5.54
-                                 rust-clap-derive-4.5.49
-                                 rust-clap-lex-0.7.6
-                                 rust-colorchoice-1.0.4
-                                 rust-crossbeam-deque-0.8.6
-                                 rust-crossbeam-epoch-0.9.18
-                                 rust-crossbeam-utils-0.8.21
-                                 rust-either-1.15.0
-                                 rust-encoding-rs-0.8.35
-                                 rust-encoding-rs-io-0.1.7
-                                 rust-equivalent-1.0.2
-                                 rust-errno-0.3.14
-                                 rust-fastrand-2.3.0
-                                 rust-find-msvc-tools-0.1.6
-                                 rust-getrandom-0.3.4
-                                 rust-hash-chain-0.3.2
-                                 rust-hashbrown-0.16.1
-                                 rust-heck-0.5.0
-                                 rust-indexmap-2.12.1
-                                 rust-is-terminal-polyfill-1.70.2
-                                 rust-itoa-1.0.15
-                                 rust-js-sys-0.3.83
-                                 rust-json5-1.3.0
-                                 rust-lazy-static-1.5.0
-                                 rust-libc-0.2.178
-                                 rust-libmimalloc-sys-0.1.44
-                                 rust-linux-raw-sys-0.11.0
-                                 rust-lock-api-0.4.14
-                                 rust-log-0.4.29
-                                 rust-memchr-2.7.6
-                                 rust-mimalloc-0.1.48
-                                 rust-minimal-lexical-0.2.1
-                                 rust-murmur3-0.4.1
-                                 rust-nohash-hasher-0.2.0
-                                 rust-nom-7.1.3
-                                 rust-num-traits-0.2.19
-                                 rust-once-cell-1.21.3
-                                 rust-once-cell-polyfill-1.70.2
-                                 rust-parking-lot-0.12.5
-                                 rust-parking-lot-core-0.9.12
-                                 rust-paste-1.0.15
-                                 rust-pin-project-lite-0.2.16
-                                 rust-proc-macro2-1.0.104
-                                 rust-quote-1.0.42
-                                 rust-r-efi-5.3.0
-                                 rust-rayon-1.11.0
-                                 rust-rayon-core-1.13.0
-                                 rust-redox-syscall-0.5.18
-                                 rust-regex-1.12.2
-                                 rust-regex-automata-0.4.13
-                                 rust-regex-syntax-0.8.8
-                                 rust-res-regex-0.1.4
-                                 rust-resast-0.5.0
-                                 rust-ress-0.11.7
-                                 rust-ressa-0.8.2
-                                 rust-rustix-1.1.3
-                                 rust-rustversion-1.0.22
-                                 rust-ryu-1.0.20
-                                 rust-saphyr-parser-bw-0.0.605
-                                 rust-scopeguard-1.2.0
-                                 rust-serde-1.0.228
-                                 rust-serde-saphyr-0.0.16
-                                 rust-serde-core-1.0.228
-                                 rust-serde-derive-1.0.228
-                                 rust-serde-json-1.0.145
-                                 rust-serde-spanned-1.0.4
-                                 rust-shlex-1.3.0
-                                 rust-smallvec-1.15.1
-                                 rust-smallvec-2.0.0-alpha.12
-                                 rust-strsim-0.11.1
-                                 rust-syn-2.0.112
-                                 rust-tempfile-3.24.0
-                                 rust-thiserror-1.0.69
-                                 rust-thiserror-2.0.18
-                                 rust-thiserror-impl-1.0.69
-                                 rust-thiserror-impl-2.0.18
-                                 rust-toml-0.9.8
-                                 rust-toml-datetime-0.7.5+spec-1.1.0
-                                 rust-toml-parser-1.0.6+spec-1.1.0
-                                 rust-toml-writer-1.0.6+spec-1.1.0
-                                 rust-tracing-0.1.44
-                                 rust-tracing-attributes-0.1.31
-                                 rust-tracing-core-0.1.36
-                                 rust-typed-arena-2.0.2
-                                 rust-ucd-trie-0.1.7
-                                 rust-unic-char-property-0.9.0
-                                 rust-unic-char-range-0.9.0
-                                 rust-unic-common-0.9.0
-                                 rust-unic-ucd-ident-0.9.0
-                                 rust-unic-ucd-version-0.9.0
-                                 rust-unicode-ident-1.0.22
-                                 rust-unicode-width-0.2.2
-                                 rust-unicode-xid-0.2.6
-                                 rust-utf8parse-0.2.2
-                                 rust-uuid-1.19.0
-                                 rust-version-check-0.9.5
-                                 rust-wasip2-1.0.1+wasi-0.2.4
-                                 rust-wasm-bindgen-0.2.106
-                                 rust-wasm-bindgen-macro-0.2.106
-                                 rust-wasm-bindgen-macro-support-0.2.106
-                                 rust-wasm-bindgen-shared-0.2.106
-                                 rust-windows-link-0.2.1
-                                 rust-windows-sys-0.61.2
-                                 rust-winnow-0.7.14
-                                 rust-wit-bindgen-0.46.0
-                                 rust-zerocopy-0.8.33
-                                 rust-zerocopy-derive-0.8.33
-                                 rust-zmij-1.0.12)))
-
 (define-public celq
   (package
     (name "celq")
@@ -688,7 +552,141 @@
        (sha256
         (base32 "04gb872bav1ldnrd0k65iigkd1d171z6089vm25hj12kzwj2zvgy"))))
     (build-system cargo-build-system)
-    (inputs (cargo-inputs 'celq))
+    (arguments
+     `(#:cargo-inputs
+       (("rust-ahash" ,rust-ahash-0.8.12)
+        ("rust-aho-corasick" ,rust-aho-corasick-1.1.4)
+        ("rust-annotate-snippets" ,rust-annotate-snippets-0.12.10)
+        ("rust-anstream" ,rust-anstream-0.6.21)
+        ("rust-anstyle" ,rust-anstyle-1.0.13)
+        ("rust-anstyle-parse" ,rust-anstyle-parse-0.2.7)
+        ("rust-anstyle-query" ,rust-anstyle-query-1.1.5)
+        ("rust-anstyle-wincon" ,rust-anstyle-wincon-3.0.11)
+        ("rust-antlr4rust" ,rust-antlr4rust-0.5.2)
+        ("rust-anyhow" ,rust-anyhow-1.0.100)
+        ("rust-arraydeque" ,rust-arraydeque-0.5.1)
+        ("rust-autocfg" ,rust-autocfg-1.5.0)
+        ("rust-base64" ,rust-base64-0.22.1)
+        ("rust-better-any" ,rust-better-any-0.2.1)
+        ("rust-bit-set" ,rust-bit-set-0.8.0)
+        ("rust-bit-vec" ,rust-bit-vec-0.8.0)
+        ("rust-bitflags" ,rust-bitflags-2.10.0)
+        ("rust-bumpalo" ,rust-bumpalo-3.19.1)
+        ("rust-byteorder" ,rust-byteorder-1.5.0)
+        ("rust-bytes" ,rust-bytes-1.11.0)
+        ("rust-cc" ,rust-cc-1.2.51)
+        ("rust-cel" ,rust-cel-0.12.0)
+        ("rust-cfg-if" ,rust-cfg-if-1.0.4)
+        ("rust-chrono" ,rust-chrono-0.4.42)
+        ("rust-clap" ,rust-clap-4.5.54)
+        ("rust-clap-builder" ,rust-clap-builder-4.5.54)
+        ("rust-clap-derive" ,rust-clap-derive-4.5.49)
+        ("rust-clap-lex" ,rust-clap-lex-0.7.6)
+        ("rust-colorchoice" ,rust-colorchoice-1.0.4)
+        ("rust-crossbeam-deque" ,rust-crossbeam-deque-0.8.6)
+        ("rust-crossbeam-epoch" ,rust-crossbeam-epoch-0.9.18)
+        ("rust-crossbeam-utils" ,rust-crossbeam-utils-0.8.21)
+        ("rust-either" ,rust-either-1.15.0)
+        ("rust-encoding-rs" ,rust-encoding-rs-0.8.35)
+        ("rust-encoding-rs-io" ,rust-encoding-rs-io-0.1.7)
+        ("rust-equivalent" ,rust-equivalent-1.0.2)
+        ("rust-errno" ,rust-errno-0.3.14)
+        ("rust-fastrand" ,rust-fastrand-2.3.0)
+        ("rust-find-msvc-tools" ,rust-find-msvc-tools-0.1.6)
+        ("rust-getrandom" ,rust-getrandom-0.3.4)
+        ("rust-hash-chain" ,rust-hash-chain-0.3.2)
+        ("rust-hashbrown" ,rust-hashbrown-0.16.1)
+        ("rust-heck" ,rust-heck-0.5.0)
+        ("rust-indexmap" ,rust-indexmap-2.12.1)
+        ("rust-is-terminal-polyfill" ,rust-is-terminal-polyfill-1.70.2)
+        ("rust-itoa" ,rust-itoa-1.0.15)
+        ("rust-js-sys" ,rust-js-sys-0.3.83)
+        ("rust-json5" ,rust-json5-1.3.0)
+        ("rust-lazy-static" ,rust-lazy-static-1.5.0)
+        ("rust-libc" ,rust-libc-0.2.178)
+        ("rust-libmimalloc-sys" ,rust-libmimalloc-sys-0.1.44)
+        ("rust-linux-raw-sys" ,rust-linux-raw-sys-0.11.0)
+        ("rust-lock-api" ,rust-lock-api-0.4.14)
+        ("rust-log" ,rust-log-0.4.29)
+        ("rust-memchr" ,rust-memchr-2.7.6)
+        ("rust-mimalloc" ,rust-mimalloc-0.1.48)
+        ("rust-minimal-lexical" ,rust-minimal-lexical-0.2.1)
+        ("rust-murmur3" ,rust-murmur3-0.4.1)
+        ("rust-nohash-hasher" ,rust-nohash-hasher-0.2.0)
+        ("rust-nom" ,rust-nom-7.1.3)
+        ("rust-num-traits" ,rust-num-traits-0.2.19)
+        ("rust-once-cell" ,rust-once-cell-1.21.3)
+        ("rust-once-cell-polyfill" ,rust-once-cell-polyfill-1.70.2)
+        ("rust-parking-lot" ,rust-parking-lot-0.12.5)
+        ("rust-parking-lot-core" ,rust-parking-lot-core-0.9.12)
+        ("rust-paste" ,rust-paste-1.0.15)
+        ("rust-pin-project-lite" ,rust-pin-project-lite-0.2.16)
+        ("rust-proc-macro2" ,rust-proc-macro2-1.0.104)
+        ("rust-quote" ,rust-quote-1.0.42)
+        ("rust-r-efi" ,rust-r-efi-5.3.0)
+        ("rust-rayon" ,rust-rayon-1.11.0)
+        ("rust-rayon-core" ,rust-rayon-core-1.13.0)
+        ("rust-redox-syscall" ,rust-redox-syscall-0.5.18)
+        ("rust-regex" ,rust-regex-1.12.2)
+        ("rust-regex-automata" ,rust-regex-automata-0.4.13)
+        ("rust-regex-syntax" ,rust-regex-syntax-0.8.8)
+        ("rust-res-regex" ,rust-res-regex-0.1.4)
+        ("rust-resast" ,rust-resast-0.5.0)
+        ("rust-ress" ,rust-ress-0.11.7)
+        ("rust-ressa" ,rust-ressa-0.8.2)
+        ("rust-rustix" ,rust-rustix-1.1.3)
+        ("rust-rustversion" ,rust-rustversion-1.0.22)
+        ("rust-ryu" ,rust-ryu-1.0.20)
+        ("rust-saphyr-parser-bw" ,rust-saphyr-parser-bw-0.0.605)
+        ("rust-scopeguard" ,rust-scopeguard-1.2.0)
+        ("rust-serde" ,rust-serde-1.0.228)
+        ("rust-serde-saphyr" ,rust-serde-saphyr-0.0.16)
+        ("rust-serde-core" ,rust-serde-core-1.0.228)
+        ("rust-serde-derive" ,rust-serde-derive-1.0.228)
+        ("rust-serde-json" ,rust-serde-json-1.0.145)
+        ("rust-serde-spanned" ,rust-serde-spanned-1.0.4)
+        ("rust-shlex" ,rust-shlex-1.3.0)
+        ("rust-smallvec" ,rust-smallvec-1.15.1)
+        ("rust-smallvec" ,rust-smallvec-2.0.0-alpha.12)
+        ("rust-strsim" ,rust-strsim-0.11.1)
+        ("rust-syn" ,rust-syn-2.0.112)
+        ("rust-tempfile" ,rust-tempfile-3.24.0)
+        ("rust-thiserror" ,rust-thiserror-1.0.69)
+        ("rust-thiserror" ,rust-thiserror-2.0.18)
+        ("rust-thiserror-impl" ,rust-thiserror-impl-1.0.69)
+        ("rust-thiserror-impl" ,rust-thiserror-impl-2.0.18)
+        ("rust-toml" ,rust-toml-0.9.8)
+        ("rust-toml-datetime" ,rust-toml-datetime-0.7.5+spec-1.1.0)
+        ("rust-toml-parser" ,rust-toml-parser-1.0.6+spec-1.1.0)
+        ("rust-toml-writer" ,rust-toml-writer-1.0.6+spec-1.1.0)
+        ("rust-tracing" ,rust-tracing-0.1.44)
+        ("rust-tracing-attributes" ,rust-tracing-attributes-0.1.31)
+        ("rust-tracing-core" ,rust-tracing-core-0.1.36)
+        ("rust-typed-arena" ,rust-typed-arena-2.0.2)
+        ("rust-ucd-trie" ,rust-ucd-trie-0.1.7)
+        ("rust-unic-char-property" ,rust-unic-char-property-0.9.0)
+        ("rust-unic-char-range" ,rust-unic-char-range-0.9.0)
+        ("rust-unic-common" ,rust-unic-common-0.9.0)
+        ("rust-unic-ucd-ident" ,rust-unic-ucd-ident-0.9.0)
+        ("rust-unic-ucd-version" ,rust-unic-ucd-version-0.9.0)
+        ("rust-unicode-ident" ,rust-unicode-ident-1.0.22)
+        ("rust-unicode-width" ,rust-unicode-width-0.2.2)
+        ("rust-unicode-xid" ,rust-unicode-xid-0.2.6)
+        ("rust-utf8parse" ,rust-utf8parse-0.2.2)
+        ("rust-uuid" ,rust-uuid-1.19.0)
+        ("rust-version-check" ,rust-version-check-0.9.5)
+        ("rust-wasip2" ,rust-wasip2-1.0.1+wasi-0.2.4)
+        ("rust-wasm-bindgen" ,rust-wasm-bindgen-0.2.106)
+        ("rust-wasm-bindgen-macro" ,rust-wasm-bindgen-macro-0.2.106)
+        ("rust-wasm-bindgen-macro-support" ,rust-wasm-bindgen-macro-support-0.2.106)
+        ("rust-wasm-bindgen-shared" ,rust-wasm-bindgen-shared-0.2.106)
+        ("rust-windows-link" ,rust-windows-link-0.2.1)
+        ("rust-windows-sys" ,rust-windows-sys-0.61.2)
+        ("rust-winnow" ,rust-winnow-0.7.14)
+        ("rust-wit-bindgen" ,rust-wit-bindgen-0.46.0)
+        ("rust-zerocopy" ,rust-zerocopy-0.8.33)
+        ("rust-zerocopy-derive" ,rust-zerocopy-derive-0.8.33)
+        ("rust-zmij" ,rust-zmij-1.0.12))))
     (home-page "https://github.com/IvanIsCoding/celq")
     (synopsis "CEL command-line query tool for JSON data")
     (description
