@@ -556,6 +556,8 @@
     (arguments
      (list
       #:install-source? #f
+      #:cargo-build-flags #~'("--no-default-features" "--features" "from-toml")
+      #:cargo-test-flags  #~'("--no-default-features" "--features" "from-toml")
       #:phases
       #~(modify-phases %standard-phases
           (add-after 'unpack 'patch-msrv
