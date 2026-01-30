@@ -612,6 +612,9 @@
                 ;; Patch json5 version
                 (("version = \"1\\.3\\.0\"")
                  "version = \"0.4\"")
+                ;; Patch bytes feature
+                (("\"bytes\",")
+                 "")
                 ;; Patch cel version
                 (("version = \"0\\.12\\.0\"")
                  "version = \"0.11.6\"")))))))
