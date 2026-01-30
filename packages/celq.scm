@@ -562,11 +562,18 @@
       '(list "--release" "--no-default-features")
       #:phases
       #~(modify-phases %standard-phases
-          (add-after 'unpack 'patch-msrv
+          (add-after 'unpack 'patch-dependencies
             (lambda _
               (substitute* "Cargo.toml"
-                (("^rust-version = .*")
-                 "rust-version = \"1.85\"\n")))))))
+                ;; Patch rust-version
+                (("rust-version = \"[^\"]+\"")
+                 "rust-version = \"1.85\"")
+                ;; Patch json5 version
+                (("version = \"1\\.3\\.0\"")
+                 "version = \"0.4\"")
+                ;; Patch cel version
+                (("version = \"0\\.12\\.0\"")
+                 "version = \"0.11.6\"")))))))
     (inputs
      (list rust-ahash-0.8.12
            rust-aho-corasick-1.1.4
