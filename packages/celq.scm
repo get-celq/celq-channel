@@ -633,6 +633,7 @@
            rust-bit-set-0.8.0
            rust-bit-vec-0.8.0
            rust-bitflags-2.10.0
+           rust-block-buffer-0.10.4
            rust-bumpalo-3.19.1
            rust-byteorder-1.5.0
            rust-cc-1.2.51
@@ -644,9 +645,12 @@
            rust-clap-derive-4.5.49
            rust-clap-lex-0.7.6
            rust-colorchoice-1.0.4
+           rust-cpufeatures-0.2.17
            rust-crossbeam-deque-0.8.6
            rust-crossbeam-epoch-0.9.18
            rust-crossbeam-utils-0.8.21
+           rust-crypto-common-0.1.7
+           rust-digest-0.10.7      
            rust-either-1.15.0
            rust-encoding-rs-0.8.35
            rust-encoding-rs-io-0.1.7
@@ -654,6 +658,7 @@
            rust-errno-0.3.14
            rust-fastrand-2.3.0
            rust-find-msvc-tools-0.1.6
+           rust-generic-array-0.14.7
            rust-getrandom-0.3.4
            rust-hash-chain-0.3.2
            rust-hashbrown-0.16.1
@@ -681,6 +686,10 @@
            rust-parking-lot-0.12.5
            rust-parking-lot-core-0.9.12
            rust-paste-1.0.15
+           rust-pest-2.8.5
+           rust-pest-derive-2.8.5
+           rust-pest-generator-2.8.5
+           rust-pest-meta-2.8.5
            rust-pin-project-lite-0.2.16
            rust-proc-macro2-1.0.104
            rust-quote-1.0.42
@@ -706,6 +715,7 @@
            rust-serde-json-1.0.145
            rust-serde-saphyr-0.0.16
            rust-serde-spanned-1.0.4
+           rust-sha2-0.10.9
            rust-shlex-1.3.0
            rust-smallvec-1.15.1
            rust-smallvec-2.0.0-alpha.12
@@ -724,6 +734,7 @@
            rust-tracing-attributes-0.1.31
            rust-tracing-core-0.1.36
            rust-typed-arena-2.0.2
+           rust-typenum-1.19.0
            rust-ucd-trie-0.1.7
            rust-unic-char-property-0.9.0
            rust-unic-char-range-0.9.0
