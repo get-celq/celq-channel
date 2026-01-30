@@ -600,7 +600,7 @@
       #:cargo-build-flags
       '(list "--release" "--no-default-features")
       #:cargo-test-flags
-      '(list "--release" "--no-default-features")
+      '(list "--no-default-features")
       #:phases
       #~(modify-phases %standard-phases
           (add-after 'unpack 'patch-dependencies
