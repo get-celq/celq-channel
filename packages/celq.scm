@@ -556,6 +556,10 @@
     (arguments
      (list
       #:install-source? #f
+      #:cargo-build-flags
+      '(list "--release" "--no-default-features")
+      #:cargo-test-flags
+      '(list "--release" "--no-default-features")
       #:phases
       #~(modify-phases %standard-phases
           (add-after 'unpack 'patch-msrv
