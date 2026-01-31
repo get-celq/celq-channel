@@ -1,8 +1,6 @@
 name: Test Guix Channel
-
 on:
   workflow_dispatch:
-
 jobs:
   test-guix-build:
     runs-on: ubuntu-latest
@@ -13,8 +11,6 @@ jobs:
     steps:
       - name: Checkout celq-channel
         uses: actions/checkout@v4
-        with:
-          path: celq-channel
       
       - name: Checkout celq repository (for smoke tests)
         uses: actions/checkout@v4
@@ -22,37 +18,10 @@ jobs:
           repository: IvanIsCoding/celq
           path: celq-repo
       
-      - name: Configure Guix channel
+      - name: Copy smoke tests
         run: |
-          /entry-point.sh sh -c "
-            mkdir -p /root/.config/guix
-            cat > /root/.config/guix/channels.scm <<'EOFCHANNELS'
-          (cons* (channel
-                  (name 'celq)
-                  (url \"file://$GITHUB_WORKSPACE/celq-channel\"))
-                 %default-channels)
-          EOFCHANNELS
-            
-            guix pull
-          "
+          cp celq-repo/.github/scripts/smoke-test.sh .
       
-      - name: Build celq package
+      - name: Build and test celq package
         run: |
-          /entry-point.sh guix build -L "$GITHUB_WORKSPACE/celq-channel" celq
-      
-      - name: Find celq binary path
-        id: find-celq
-        run: |
-          CELQ_PATH=$(/entry-point.sh guix build -L "$GITHUB_WORKSPACE/celq-channel" celq)/bin/celq
-          echo "celq_path=$CELQ_PATH" >> $GITHUB_OUTPUT
-          echo "Found celq at: $CELQ_PATH"
-          
-      - name: Verify celq installation
-        run: |
-          ${{ steps.find-celq.outputs.celq_path }} --version
-          ${{ steps.find-celq.outputs.celq_path }} --help
-      
-      - name: Run smoke tests
-        run: |
-          cd celq-repo
-          bash .github/scripts/smoke-test.sh ${{ steps.find-celq.outputs.celq_path }}
+          /entry-point.sh guix shell -L . celq -- bash smoke-test.sh celq
