@@ -585,7 +585,7 @@
 (define-public celq
   (package
     (name "celq")
-    (version "0.3.1")
+    (version "0.3.2")
     (source
      (origin
        (method url-fetch)
