@@ -5,7 +5,7 @@ jobs:
   test-guix-build:
     runs-on: ubuntu-latest
     container:
-      image: metacall/guix:v20260119
+      image: metacall/guix:latest
       options: --privileged
     
     steps:
@@ -22,6 +22,11 @@ jobs:
         run: |
           cp celq-repo/.github/scripts/smoke-test.sh .
       
-      - name: Build and test celq package
+      - name: Build celq package
         run: |
-          /entry-point.sh guix shell -L . celq -- bash smoke-test.sh celq
+          /entry-point.sh guix build -L . celq
+      
+      - name: Run smoke tests
+        run: |
+          CELQ_PATH=$(/entry-point.sh guix build -L . celq)/bin/celq
+          bash smoke-test.sh "$CELQ_PATH"
