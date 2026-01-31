@@ -24,19 +24,17 @@ jobs:
       
       - name: Configure Guix channel
         run: |
-          /entry-point.sh sh -c '
-            # Add celq channel to channels.scm
+          /entry-point.sh sh -c "
             mkdir -p /root/.config/guix
-            cat > /root/.config/guix/channels.scm <<EOF
+            cat > /root/.config/guix/channels.scm <<'EOFCHANNELS'
           (cons* (channel
                   (name 'celq)
-                  (url "file://$GITHUB_WORKSPACE/celq-channel"))
+                  (url \"file://$GITHUB_WORKSPACE/celq-channel\"))
                  %default-channels)
-          EOF
+          EOFCHANNELS
             
-            # Update channels
             guix pull
-          '
+          "
       
       - name: Build celq package
         run: |
