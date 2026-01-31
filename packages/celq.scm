@@ -592,7 +592,7 @@
        (uri (crate-uri "celq" version))
        (file-name (string-append name "-" version ".tar.gz"))
        (sha256
-        (base32 "04gb872bav1ldnrd0k65iigkd1d171z6089vm25hj12kzwj2zvgy"))))
+        (base32 "00fh2x17cj36wasrmccg730irc0r4mkjpmgpv2bk4p5sangh201y"))))
     (build-system cargo-build-system)
     (arguments
      (list
