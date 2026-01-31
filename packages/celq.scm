@@ -612,8 +612,14 @@
                 ;; Patch json5 version
                 (("version = \"1\\.3\\.0\"")
                  "version = \"0.4\"")
-                ;; Patch bytes feature
+                ;; Patch bytes feature for cel
                 (("\"bytes\",")
+                 "")
+                ;; Patch from-yaml feature for celq
+                (("\"from-yaml\",")
+                 "")
+                ;; Patch greppable feature for celq
+                (("\"greppable\",")
                  "")
                 ;; Patch cel version
                 (("version = \"0\\.12\\.0\"")
