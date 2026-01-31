@@ -5,7 +5,7 @@ jobs:
   test-guix-build:
     runs-on: ubuntu-latest
     container:
-      image: metacall/guix:latest
+      image: metacall/guix:v20260119
       options: --privileged
     
     steps:
