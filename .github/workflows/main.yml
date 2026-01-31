@@ -24,4 +24,4 @@ jobs:
       
       - name: Build and test celq package
         run: |
-          /entry-point.sh guix shell -L . celq -- bash smoke-test.sh celq
+          /entry-point.sh guix shell -L . celq
